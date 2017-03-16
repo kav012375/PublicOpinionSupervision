@@ -6,7 +6,9 @@ import java.util.List;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by Zeus Feng on 2017/3/16.
@@ -16,6 +18,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @SpringBootApplication
 @EnableScheduling
+@ComponentScan(value = {
+    "com.supervision.dal",
+    "com.supervision.start"
+})
 public class Application {
     public static void main(String[] args) throws Exception {
         List<String> argsList = new ArrayList<String>(Arrays.asList(args));
