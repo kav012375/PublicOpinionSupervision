@@ -1,6 +1,7 @@
 !.gitignore
 /target/*
 /.idea/*
+.idea
 *.iml
 /supervision-web/target/*
 /supervision-service/target/*
