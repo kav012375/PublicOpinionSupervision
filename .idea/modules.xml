@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PublicOpinionSupervision.iml" filepath="$PROJECT_DIR$/PublicOpinionSupervision.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supervision-dal/supervision-dal.iml" filepath="$PROJECT_DIR$/supervision-dal/supervision-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supervision-service/supervision-service.iml" filepath="$PROJECT_DIR$/supervision-service/supervision-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supervision-start/supervision-start.iml" filepath="$PROJECT_DIR$/supervision-start/supervision-start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supervision-task/supervision-task.iml" filepath="$PROJECT_DIR$/supervision-task/supervision-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/supervision-web/supervision-web.iml" filepath="$PROJECT_DIR$/supervision-web/supervision-web.iml" />
+    </modules>
+  </component>
+</project>

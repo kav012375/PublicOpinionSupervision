@@ -1,0 +1,9 @@
+!.gitignore
+/target/*
+/.idea/*
+*.iml
+/supervision-web/target/*
+/supervision-service/target/*
+/supervision-task/target/*
+/supervision-start/target/*
+/supervision-dal/target/*
