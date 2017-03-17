@@ -20,7 +20,9 @@ import org.springframework.stereotype.Component;
 @EnableScheduling
 @ComponentScan(value = {
     "com.supervision.dal",
-    "com.supervision.start"
+    "com.supervision.start",
+    "com.supervision.service",
+    "com.supervision.web"
 })
 public class Application {
     public static void main(String[] args) throws Exception {
