@@ -489,7 +489,7 @@
             //regexp, used with separator
             this.regexpSep = (this.separator && this.separator.length) ? new RegExp('(\\d\\d?)\\s*\\' + this.separator + '\\s*(\\d?\\d?)\\s*(a|p)?', 'i') : null;
 
-            //second regexp applied if previous has no result or separator is empty (to reversed string)
+            //second regexp applied if previous has no results or separator is empty (to reversed string)
             this.regexpNoSep = new RegExp('(a|p)?\\s*(\\d{1,4})', 'i');
         },
 

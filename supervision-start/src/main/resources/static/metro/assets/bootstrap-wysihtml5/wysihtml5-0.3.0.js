@@ -3657,7 +3657,7 @@ wysihtml5.browser = (function() {
       innerHTML                   = clonedTestElement.innerHTML.toLowerCase();
       returnValue                 = innerHTML === "<p></p><div></div>" || innerHTML === "<p><div></div></p>";
 
-      // Cache result by overwriting current function
+      // Cache results by overwriting current function
       this.autoClosesUnclosedTags = function() { return returnValue; };
 
       return returnValue;
@@ -4122,7 +4122,7 @@ wysihtml5.dom.contains = (function() {
  *      wysihtml5.dom.convertToList(document.getElementById("pseudo-list"), "ul");
  *    </script>
  *
- *    <!-- Will result in: -->
+ *    <!-- Will results in: -->
  *    <ul>
  *      <li>eminem</li>
  *      <li>dr. dre</li>
@@ -4708,7 +4708,7 @@ wysihtml5.dom.observe = function(element, eventNames, handler) {
  *      tags {
  *        p:      "div",      // Rename p tags to div tags
  *        font:   "span"      // Rename font tags to span tags
- *        div:    true,       // Keep them, also possible (same result when passing: "div" or true)
+ *        div:    true,       // Keep them, also possible (same results when passing: "div" or true)
  *        script: undefined   // Remove script elements
  *      }
  *    });
@@ -5173,7 +5173,7 @@ wysihtml5.dom.removeEmptyTextNodes = function(node) {
  *      wysihtml5.dom.renameElement(document.getElementById("list"), "ol");
  *    </script>
  *
- *    <!-- Will result in: -->
+ *    <!-- Will results in: -->
  *    <ol>
  *      <li>eminem</li>
  *      <li>dr. dre</li>
@@ -5236,7 +5236,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
  *      wysihtml5.dom.resolveList(document.getElementById("list"));
  *    </script>
  *
- *    <!-- Will result in: -->
+ *    <!-- Will results in: -->
  *    eminem<br>
  *    dr. dre<br>
  *    50 Cent<br>
@@ -5774,7 +5774,7 @@ wysihtml5.quirks.cleanPastedHTML = (function() {
 //      var d = document.createElement("div");
 //      d.innerHTML ='<a href="~"></a>';
 //      d.innerHTML;
-// will result in:
+// will results in:
 //      <a href="%7E"></a>
 // which is wrong
 (function(wysihtml5) {
@@ -7029,7 +7029,7 @@ wysihtml5.Commands = Base.extend(
       DEFAULT_NODE_NAME       = "DIV",
       // Following elements are grouped
       // when the caret is within a H1 and the H4 is invoked, the H1 should turn into H4
-      // instead of creating a H4 within a H1 which would result in semantically invalid html
+      // instead of creating a H4 within a H1 which would results in semantically invalid html
       BLOCK_ELEMENTS_GROUP    = ["H1", "H2", "H3", "H4", "H5", "H6", "P", "BLOCKQUOTE", DEFAULT_NODE_NAME];
   
   /**

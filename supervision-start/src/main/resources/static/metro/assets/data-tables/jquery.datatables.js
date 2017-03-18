@@ -983,7 +983,7 @@
 					}
 		
 					// If array notation is used, we just want to strip it and use the property name
-					// and assign the value. If it isn't used, then we get the result we want anyway
+					// and assign the value. If it isn't used, then we get the results we want anyway
 					data[ a[a.length-1].replace(__reArray, '') ] = val;
 				};
 		
@@ -1065,7 +1065,7 @@
 		
 		 /**
 		 * Call the developer defined fnRender function for a given cell (row/column) with
-		 * the required parameters and return the result.
+		 * the required parameters and return the results.
 		 *  @param {object} oSettings dataTables settings object
 		 *  @param {int} iRow aoData index for the row
 		 *  @param {int} iCol aoColumns index for the column
@@ -5084,7 +5084,7 @@
 		 *  @param {string} [oOpts.page=all] Limit the selection to the currently displayed page
 		 *    ("current") or not ("all"). If 'current' is given, then order is assumed to be 
 		 *    'current' and filter is 'applied', regardless of what they might be given as.
-		 *  @returns {array} Data for the matched elements. If any elements, as a result of the
+		 *  @returns {array} Data for the matched elements. If any elements, as a results of the
 		 *    selector, were not TR, TD or TH elements in the DataTable, they will have a null 
 		 *    entry in the array.
 		 *  @dtopt API
@@ -6959,7 +6959,7 @@
 		 *     <li>
 		 *       Function return:
 		 *       <ul>
-		 *         <li>{boolean} Include the row in the filtered result set (true) or not (false)</li>
+		 *         <li>{boolean} Include the row in the filtered results set (true) or not (false)</li>
 		 *       </ul>
 		 *     </il>
 		 *   </ul>
@@ -7710,7 +7710,7 @@
 		/**
 		 * Partner property to mData which is used (only when defined) to get
 		 * the data - i.e. it is basically the same as mData, but without the
-		 * 'set' option, and also the data fed to it is the result from mData.
+		 * 'set' option, and also the data fed to it is the results from mData.
 		 * This is the rendering method to match the data method of mData.
 		 *  @type function|int|string|null
 		 *  @default null
@@ -8282,7 +8282,7 @@
 		 * However, this can look odd when filtering data down to a small data set,
 		 * and the footer is left "floating" further down. This parameter (when
 		 * enabled) will cause DataTables to collapse the table's viewport down when
-		 * the result set will fit within the given Y height.
+		 * the results set will fit within the given Y height.
 		 *  @type boolean
 		 *  @default false
 		 *  @dtopt Options
@@ -8879,7 +8879,7 @@
 	
 		/**
 		 * Callback that is called when the state has been loaded from the state saving method
-		 * and the DataTables settings object has been modified as a result of the loaded state.
+		 * and the DataTables settings object has been modified as a results of the loaded state.
 		 *  @type function
 		 *  @param {object} oSettings DataTables settings object
 		 *  @param {object} oData The state object that was loaded
@@ -10161,7 +10161,7 @@
 		 *       data source and also array brackets to indicate that the data reader should
 		 *       loop over the data source array. When characters are given between the array
 		 *       brackets, these characters are used to join the data source array together.
-		 *       For example: "accounts[, ].name" would result in a comma separated list with
+		 *       For example: "accounts[, ].name" would results in a comma separated list with
 		 *       the 'name' value from the 'accounts' array of objects.</li>
 		 *     <li>function - the function given will be executed whenever DataTables 
 		 *       needs to set or get the data for a cell in the column. The function 
@@ -11255,7 +11255,7 @@
 		"_iDisplayEnd": 10,
 		
 		/**
-		 * Server-side processing - number of records in the result set
+		 * Server-side processing - number of records in the results set
 		 * (i.e. before filtering), Use fnRecordsTotal rather than
 		 * this property to get the value of the number of records, regardless of
 		 * the server-side processing setting.

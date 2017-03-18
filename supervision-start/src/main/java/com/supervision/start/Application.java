@@ -22,7 +22,8 @@ import org.springframework.stereotype.Component;
     "com.supervision.dal",
     "com.supervision.start",
     "com.supervision.service",
-    "com.supervision.web"
+    "com.supervision.web",
+    "com.supervision.task"
 })
 public class Application {
     public static void main(String[] args) throws Exception {

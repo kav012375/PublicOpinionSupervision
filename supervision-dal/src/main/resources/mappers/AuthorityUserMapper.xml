@@ -2,16 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.supervision.dal.authority.user.dao.AuthorityUserDAO">
     <resultMap id="UserMap" type="com.supervision.dal.authority.user.entity.AuthorityUserDO">
-        <id property="userId" column="ID"/>
-        <result property="userAcct" column="USER_ACCT"/>
-        <result property="userPwd" column="USER_PWD"/>
-        <result property="userRoleId" column="USER_ROLE_ID"/>
-        <result property="userPhone" column="USER_PHONE"/>
-        <result property="userEmail" column="USER_EMAIL"/>
+        <id property="ID" column="ID"/>
+        <result property="USER_ACCT" column="USER_ACCT"/>
+        <result property="USER_PWD" column="USER_PWD"/>
+        <result property="USER_ROLE_ID" column="USER_ROLE_ID"/>
+        <result property="USER_PHONE" column="USER_PHONE"/>
+        <result property="USER_EMAIL" column="USER_EMAIL"/>
     </resultMap>
 
     <select id="count" resultType="int">
         SELECT COUNT(*) FROM AUTHORITY_USERS;
+    </select>
+
+    <select id="getUserByUserAcct"
+            resultType="com.supervision.dal.authority.user.entity.AuthorityUserDO"
+            parameterType="java.lang.String">
+        <![CDATA[
+            SELECT * FROM authority_users WHERE USER_ACCT = #{USER_ACCT} LIMIT 1;
+        ]]>
     </select>
 
 </mapper>

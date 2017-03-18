@@ -6,7 +6,6 @@ import javax.servlet.http.HttpSession;
 
 import com.supervision.service.user.UserService;
 import com.supervision.service.user.impl.UserImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
