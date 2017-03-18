@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value = "/")
 public class Login {
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/login")
     @ResponseBody
     public ModelAndView loginPage(){
         ModelAndView modelAndView = new ModelAndView();
