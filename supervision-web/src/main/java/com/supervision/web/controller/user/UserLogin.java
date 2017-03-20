@@ -3,6 +3,7 @@ package com.supervision.web.controller.user;
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.supervision.dal.authority.user.entity.AuthorityUserDO;
@@ -31,11 +32,11 @@ public class UserLogin {
     @RequestMapping(value = "/login.do",method = RequestMethod.POST)
     @ResponseBody
     public String userLoginAction(
-        HttpServletRequest request,
+        HttpServletResponse response,
         HttpSession session,
         @RequestParam("ua") String userAcct,
         @RequestParam("up") String userPwd)
-    {
+    throws Throwable{
         AuthorityUserDO authorityUserDO = new AuthorityUserDO();
         authorityUserDO.setUSER_ACCT(userAcct);
         authorityUserDO.setUSER_PWD(userPwd);
@@ -44,7 +45,9 @@ public class UserLogin {
             session.setAttribute(UserSessions.CURRENT_LOGIN_USER_ACCT,userAcct);
             session.setAttribute(UserSessions.CURRENT_LOGIN_TIME,(new Date()).toString());
             session.setAttribute(UserSessions.CURRENT_ACCESS_TOKEN,"null");
-            return "登陆成功";
+            //response.setCharacterEncoding("utf-8");
+            //response.getWriter().print("登录成功");
+            return "登录成功";
         }else{
             return result.getErrorMsg();
         }

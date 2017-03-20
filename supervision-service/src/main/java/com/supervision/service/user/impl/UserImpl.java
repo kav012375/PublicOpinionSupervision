@@ -42,29 +42,29 @@ public class UserImpl implements UserService {
         BaseResult<String> result = new BaseResult<String>();
         if (NULL_SIGN.equals(authorityUserDO.getUSER_ACCT())){
             result = result.assembleFalseResult(
-                UserErrorCodeEnum.USER_ACCOUNT_IS_NULL.getErrorCode(),
-                UserErrorCodeEnum.USER_ACCOUNT_IS_NULL.getErrorMsg());
+                UserErrorCodeEnum.USER_ACCOUNT_IS_NULL.getErrorMsg(),
+                UserErrorCodeEnum.USER_ACCOUNT_IS_NULL.getErrorCode());
             return result;
         }
         if (NULL_SIGN.equals(authorityUserDO.getUSER_PWD())){
             result = result.assembleFalseResult(
-                UserErrorCodeEnum.USER_PASSWORD_IS_NULL.getErrorCode(),
-                UserErrorCodeEnum.USER_PASSWORD_IS_NULL.getErrorMsg());
+                UserErrorCodeEnum.USER_PASSWORD_IS_NULL.getErrorMsg(),
+                UserErrorCodeEnum.USER_PASSWORD_IS_NULL.getErrorCode());
             return result;
         }
         String userAcct = authorityUserDO.getUSER_ACCT();
         AuthorityUserDO userDO = authorityUserDAO.getUserByUserAcct(userAcct);
         if (userDO == null){
             result = result.assembleFalseResult(
-                UserErrorCodeEnum.USER_ACCOUNT_DOES_NOT_EXIST.getErrorCode(),
-                UserErrorCodeEnum.USER_ACCOUNT_DOES_NOT_EXIST.getErrorMsg());
+                UserErrorCodeEnum.USER_ACCOUNT_DOES_NOT_EXIST.getErrorMsg(),
+                UserErrorCodeEnum.USER_ACCOUNT_DOES_NOT_EXIST.getErrorCode());
             return result;
         }
 
         if (!userDO.getUSER_PWD().equals(EncryptionUtil.MD5Creator(authorityUserDO.getUSER_PWD()))){
             result = result.assembleFalseResult(
-                UserErrorCodeEnum.USER_PASSWORD_IS_INCORRECT.getErrorCode(),
-                UserErrorCodeEnum.USER_PASSWORD_IS_INCORRECT.getErrorMsg());
+                UserErrorCodeEnum.USER_PASSWORD_IS_INCORRECT.getErrorMsg(),
+                UserErrorCodeEnum.USER_PASSWORD_IS_INCORRECT.getErrorCode());
             return result;
         }
 

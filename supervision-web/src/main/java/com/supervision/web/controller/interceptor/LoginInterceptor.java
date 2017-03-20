@@ -30,9 +30,8 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
             "/css",
             "/getCode.do",
             "/register.do",
-            "/task/gettask",
-            "/file","/error",
-            "/taskresult"
+            "/file",
+            "/error"
         };
         String preferUrl = request.getRequestURI();
         for(String url:nonFilterUri){
@@ -43,7 +42,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
         //检测是否已经登录
         HttpSession httpSession = request.getSession();
         if (httpSession == null){
-            response.sendRedirect("/user/login");
+            response.sendRedirect("/login");
         }else{
             //不能使用注入，实际证明拦截器中无法使用注入
             UserService userService = new UserImpl();
